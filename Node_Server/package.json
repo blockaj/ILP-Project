@@ -1,0 +1,10 @@
+{
+	"name": "ILP_Project",
+	"description": "My server for my ILP project.",
+	"version": "0.0.0",
+	"dependencies": {
+		"express" : "*",
+		"MongoDB": "*",
+		"Mongoose": "*"
+	}
+}
