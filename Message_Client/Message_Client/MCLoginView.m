@@ -7,6 +7,7 @@
 //
 
 #import "MCLoginView.h"
+#import "MCRegisterView.h"
 
 @implementation MCLoginView
 -(void)viewDidLoad {
@@ -39,9 +40,12 @@
     
     UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     loginButton.frame = CGRectMake(110, 250, 100, 30);
+    loginButton.font = fontForField;
     [loginButton setTitle:@"Login" forState:UIControlStateNormal];
     [loginButton addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginButton];
+    
+
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -50,11 +54,22 @@
 }
 
 -(void)login {
-    NSURL *url = [NSURL URLWithString:@"http://localhost:3000"];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    NSString *post = [NSString stringWithFormat:@"username=%@&password=%@", self.usernameField.text, self.passwordField.text];
+    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:[NSURL URLWithString:@"http://localhost:3000/login"]];
     [request setHTTPMethod:@"POST"];
-    NSArray *postData = [NSArray arrayWithObjects:self.usernameField.text, self.passwordField.text, nil];
-    NSData *bodyData = [NSKeyedArchiver archivedDataWithRootObject:postData];
-    [request setHTTPBody:bodyData];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Length"];
+    [request setHTTPBody:postData];
+    NSURLResponse *response;
+    NSError *err;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+    NSLog(@"Response: %@", responseData);
+}
+-(void)switchToRegister {
+    MCRegisterView *registerView;
+    [[self navigationController] pushViewController:registerView animated:YES];
 }
 @end

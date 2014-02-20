@@ -23,6 +23,7 @@
 		6043233F18B53843005BF042 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6043233D18B53843005BF042 /* InfoPlist.strings */; };
 		6043234118B53843005BF042 /* Message_ClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6043234018B53843005BF042 /* Message_ClientTests.m */; };
 		6043234C18B53876005BF042 /* MCLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6043234B18B53876005BF042 /* MCLoginView.m */; };
+		6043234F18B69469005BF042 /* MCRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6043234E18B69469005BF042 /* MCRegisterView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		6043234018B53843005BF042 /* Message_ClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Message_ClientTests.m; sourceTree = "<group>"; };
 		6043234A18B53876005BF042 /* MCLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLoginView.h; sourceTree = "<group>"; };
 		6043234B18B53876005BF042 /* MCLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLoginView.m; sourceTree = "<group>"; };
+		6043234D18B69469005BF042 /* MCRegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCRegisterView.h; sourceTree = "<group>"; };
+		6043234E18B69469005BF042 /* MCRegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRegisterView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 				6043232718B53843005BF042 /* MCAppDelegate.m */,
 				6043234A18B53876005BF042 /* MCLoginView.h */,
 				6043234B18B53876005BF042 /* MCLoginView.m */,
+				6043234D18B69469005BF042 /* MCRegisterView.h */,
+				6043234E18B69469005BF042 /* MCRegisterView.m */,
 				6043232C18B53843005BF042 /* Images.xcassets */,
 				6043232918B53843005BF042 /* Message_Client.xcdatamodeld */,
 				6043231E18B53843005BF042 /* Supporting Files */,
@@ -257,6 +262,7 @@
 				6043234C18B53876005BF042 /* MCLoginView.m in Sources */,
 				6043232B18B53843005BF042 /* Message_Client.xcdatamodeld in Sources */,
 				6043232818B53843005BF042 /* MCAppDelegate.m in Sources */,
+				6043234F18B69469005BF042 /* MCRegisterView.m in Sources */,
 				6043232418B53843005BF042 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
