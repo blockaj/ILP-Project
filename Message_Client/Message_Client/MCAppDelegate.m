@@ -8,6 +8,7 @@
 
 #import "MCAppDelegate.h"
 #import "MCLoginView.h"
+#import "MCRegisterView.h"
 
 @implementation MCAppDelegate
 

@@ -44,6 +44,7 @@
     [loginButton setTitle:@"Login" forState:UIControlStateNormal];
     [loginButton addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginButton];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Register" style:UIBarButtonItemStyleBordered target:self action:@selector(switchToRegister)];
     
 
 }
@@ -69,7 +70,7 @@
     NSLog(@"Response: %@", responseData);
 }
 -(void)switchToRegister {
-    MCRegisterView *registerView;
-    [[self navigationController] pushViewController:registerView animated:YES];
+    MCRegisterView *registerView = [[MCRegisterView alloc] init];
+    [self.navigationController pushViewController:registerView animated:NO];
 }
 @end
