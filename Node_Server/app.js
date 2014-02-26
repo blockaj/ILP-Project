@@ -29,7 +29,6 @@ app.configure(function (){
 });
 
 app.post("/register", function(req, res){
-	console.log(req.body);
 	var shasum = crypto.createHash("sha256");
 	shasum.update(req.body.username);
 	var username = shasum.digest("Hex");
@@ -51,17 +50,16 @@ app.post("/login", function(req, res){
 	var shasum = crypto.createHash("sha256");
 	shasum.update(post.username);
 	var username = shasum.digest("Hex");
-	console.log(username);
 	var shasum2 = crypto.createHash("sha256");
 	shasum2.update(post.password);
 	var password = shasum2.digest("hex");
-	console.log(password);
 	User.findOne({username: username}, function(err, user){
+		if (err) {
+			return console.error(err);
+			console.log("Error!");
+		}
 		if (user.password == password) {
 			res.send("Success!");
-		}
-		else if (err) {
-			console.log("Error: " + err);
 		}
 	});
 	
@@ -75,6 +73,16 @@ app.post("/new_message", checkAuth, function(req, res){
 	});
 	newMessage.save(function(err, message){
 		if(err) console.log("Error: " + err);
+	});
+});
+
+app.get("/list_posts", checkAuth, function(req, res){
+	var userId = req.session.user_id;
+	Message.find({user_id: userId}, function(err, messages){
+		if (err) {
+			return console.error(err);
+		}
+		console.dir(users);
 	});
 });
 
