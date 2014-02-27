@@ -24,6 +24,8 @@
 		6043234118B53843005BF042 /* Message_ClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6043234018B53843005BF042 /* Message_ClientTests.m */; };
 		6043234C18B53876005BF042 /* MCLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6043234B18B53876005BF042 /* MCLoginView.m */; };
 		6043235218B79EDD005BF042 /* MCRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6043235118B79EDD005BF042 /* MCRegisterView.m */; };
+		6089452318BE56560047913C /* MCMessageListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6089452218BE56560047913C /* MCMessageListView.m */; };
+		6089452618BE7A0B0047913C /* MCNewMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6089452518BE7A0A0047913C /* MCNewMessageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,10 @@
 		6043234B18B53876005BF042 /* MCLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLoginView.m; sourceTree = "<group>"; };
 		6043235018B79EDD005BF042 /* MCRegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCRegisterView.h; sourceTree = "<group>"; };
 		6043235118B79EDD005BF042 /* MCRegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRegisterView.m; sourceTree = "<group>"; };
+		6089452118BE56560047913C /* MCMessageListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMessageListView.h; sourceTree = "<group>"; };
+		6089452218BE56560047913C /* MCMessageListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMessageListView.m; sourceTree = "<group>"; };
+		6089452418BE7A0A0047913C /* MCNewMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNewMessageView.h; sourceTree = "<group>"; };
+		6089452518BE7A0A0047913C /* MCNewMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNewMessageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,8 +131,12 @@
 				6043232718B53843005BF042 /* MCAppDelegate.m */,
 				6043234A18B53876005BF042 /* MCLoginView.h */,
 				6043234B18B53876005BF042 /* MCLoginView.m */,
+				6089452118BE56560047913C /* MCMessageListView.h */,
+				6089452218BE56560047913C /* MCMessageListView.m */,
 				6043235018B79EDD005BF042 /* MCRegisterView.h */,
 				6043235118B79EDD005BF042 /* MCRegisterView.m */,
+				6089452418BE7A0A0047913C /* MCNewMessageView.h */,
+				6089452518BE7A0A0047913C /* MCNewMessageView.m */,
 				6043232C18B53843005BF042 /* Images.xcassets */,
 				6043232918B53843005BF042 /* Message_Client.xcdatamodeld */,
 				6043231E18B53843005BF042 /* Supporting Files */,
@@ -260,9 +270,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6043234C18B53876005BF042 /* MCLoginView.m in Sources */,
+				6089452618BE7A0B0047913C /* MCNewMessageView.m in Sources */,
 				6043232B18B53843005BF042 /* Message_Client.xcdatamodeld in Sources */,
 				6043232818B53843005BF042 /* MCAppDelegate.m in Sources */,
 				6043235218B79EDD005BF042 /* MCRegisterView.m in Sources */,
+				6089452318BE56560047913C /* MCMessageListView.m in Sources */,
 				6043232418B53843005BF042 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,6 +476,7 @@
 				6043234618B53844005BF042 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6043234718B53844005BF042 /* Build configuration list for PBXNativeTarget "Message_ClientTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +485,7 @@
 				6043234918B53844005BF042 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

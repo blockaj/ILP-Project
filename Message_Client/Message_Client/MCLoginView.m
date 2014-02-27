@@ -8,6 +8,7 @@
 
 #import "MCLoginView.h"
 #import "MCRegisterView.h"
+#import "MCMessageListView.h"
 
 @implementation MCLoginView
 -(void)viewDidLoad {
@@ -27,6 +28,7 @@
     self.usernameField.placeholder = @"username";
     self.usernameField.delegate = self;
     self.usernameField.returnKeyType = UIReturnKeyDone;
+    self.usernameField.autocapitalizationType = NO;
     [self.view addSubview:self.usernameField];
     
     //Setup passwordField text field
@@ -64,10 +66,18 @@
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Length"];
     [request setHTTPBody:postData];
-    NSURLResponse *response;
+    NSHTTPURLResponse *response;
     NSError *err;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
-    NSLog(@"Response: %@", responseData);
+    if (response.statusCode == 200) {
+        NSLog(@"100 percent Success");
+        MCMessageListView *messageList = [[MCMessageListView alloc] init];
+        messageList.userName = self.usernameField.text;
+        [self.navigationController pushViewController:messageList animated:NO];
+        
+    } else {
+        NSLog(@"WTF?");
+    }
 }
 -(void)switchToRegister {
     MCRegisterView *registerView = [[MCRegisterView alloc] init];

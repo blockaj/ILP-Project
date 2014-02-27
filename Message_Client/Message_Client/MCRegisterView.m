@@ -25,6 +25,7 @@
     self.usernameField.font = placeholderFont;
     self.usernameField.returnKeyType = UIReturnKeyDone;
     self.usernameField.delegate = self;
+    self.usernameField.autocapitalizationType = NO;
     [self.view addSubview:self.usernameField];
     
     self.passwordField = [[UITextField alloc] initWithFrame:CGRectMake(65, 175, 190, 30)];

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MCMessageListView : UIViewController
-
+@interface MCMessageListView : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, strong) NSArray *messageList;
+@property (nonatomic, strong) NSString *userName;
+-(void)newMessage;
 @end

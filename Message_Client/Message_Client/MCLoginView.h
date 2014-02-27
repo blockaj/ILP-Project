@@ -12,6 +12,8 @@
 @property (strong, nonatomic) UILabel *appTitle;
 @property (strong, nonatomic) UITextField *usernameField;
 @property (strong, nonatomic) UITextField *passwordField;
+@property (strong, nonatomic) NSString *userName;
+
 -(void)login;
 -(void)switchToRegister;
 @end

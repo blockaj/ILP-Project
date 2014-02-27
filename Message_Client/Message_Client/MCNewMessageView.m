@@ -9,5 +9,8 @@
 #import "MCNewMessageView.h"
 
 @implementation MCNewMessageView
-
+-(void)viewDidLoad {
+    [super viewDidLoad];
+    self.navigationItem.hidesBackButton = YES;
+}
 @end
